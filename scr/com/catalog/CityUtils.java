@@ -51,15 +51,6 @@ public class CityUtils {
     }
 
     /**
-     * Printing the list of cities to console
-     *
-     * @param cities list of cities
-     */
-    public static void print(List<City> cities){
-        cities.forEach(System.out::println);
-    }
-
-    /**
      * Parsing a string from the file
      *
      * @param nextLine receives a string with a data
