@@ -65,29 +65,4 @@ public class CityUtils {
         String parsedFoundation = hasNext(scanner);
         return new City(parsedName, parsedRegion, parsedDistrict, parsedPopulation, parsedFoundation);
     }
-
-    /**
-     * Sorting a list by name
-     *
-     * @param cities list of cities
-     * @return list of cities sorted by name
-     */
-    public static List<City> sortByName(List<City> cities) {
-        NameComparator nameComparator = new NameComparator(-1, true);
-        cities.sort(nameComparator);
-        return cities;
-    }
-
-    /**
-     * Sorting a list by district and name
-     *
-     * @param cities list of cities
-     * @return list of cities sorted by district and name
-     */
-    public static List<City> sortByDistrictName(List<City> cities) {
-        District_NameComparator district_nameComparator = new District_NameComparator();
-        NameComparator nameComparator = new NameComparator(1, false);
-        cities.sort(district_nameComparator.thenComparing(nameComparator));
-        return cities;
-    }
 }
