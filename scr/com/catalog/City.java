@@ -22,6 +22,9 @@ public class City {
     public String getName() {
         return name;
     }
+    public String getPopulation() {
+        return population;
+    }
 
     @Override
     public String toString(){
