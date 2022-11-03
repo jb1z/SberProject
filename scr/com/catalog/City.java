@@ -15,16 +15,17 @@ public class City {
         this.foundation = foundation;
     }
 
-    public String getName() {
-        return name;
-    }
     public String getDistrict() {
         return district;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString(){
-        return "\nCity {Name: " + this.name + "; Region: " + this.region + "; District: " + this.district +
+        return "City {Name: " + this.name + "; Region: " + this.region + "; District: " + this.district +
                 "; Population: " + this.population + "; Foundation: " + this.foundation + "}";
     }
 }
