@@ -8,5 +8,7 @@ public class Main {
         print(parse());
         System.out.println("Sorted by name: ");
         System.out.println(sortByName(parse()));
+        System.out.println("Sorted by district and name: ");
+        System.out.println(sortByDistrictName(parse()));
     }
 }

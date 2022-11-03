@@ -75,9 +75,16 @@ public class CityUtils {
         return new City(parsedName, parsedRegion, parsedDistrict, parsedPopulation, parsedFoundation);
     }
 
-    public static List<City> sortByName(List<City> cities){
-        NameComparator nameComparator = new NameComparator();
+    public static List<City> sortByName(List<City> cities) {
+        NameComparator nameComparator = new NameComparator(-1, true);
         cities.sort(nameComparator);
+        return cities;
+    }
+
+    public static List<City> sortByDistrictName(List<City> cities) {
+        District_NameComparator district_nameComparator = new District_NameComparator();
+        NameComparator nameComparator = new NameComparator(1, false);
+        cities.sort(district_nameComparator.thenComparing(nameComparator));
         return cities;
     }
 }
