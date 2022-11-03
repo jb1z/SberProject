@@ -14,9 +14,14 @@ public class City {
         this.population = population;
         this.foundation = foundation;
     }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString(){
-        return "City {Name: " + this.name + "; Region: " + this.region + "; District: " + this.district +
+        return "\nCity {Name: " + this.name + "; Region: " + this.region + "; District: " + this.district +
                 "; Population: " + this.population + "; Foundation: " + this.foundation + "}";
     }
 }

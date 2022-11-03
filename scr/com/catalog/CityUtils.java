@@ -4,9 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class CityUtils {
     /**
@@ -75,5 +73,11 @@ public class CityUtils {
         String parsedPopulation = hasNext(scanner);
         String parsedFoundation = hasNext(scanner);
         return new City(parsedName, parsedRegion, parsedDistrict, parsedPopulation, parsedFoundation);
+    }
+
+    public static List<City> sortByName(List<City> cities){
+        NameComparator nameComparator = new NameComparator();
+        cities.sort(nameComparator);
+        return cities;
     }
 }
