@@ -1,6 +1,5 @@
 package com.catalog;
 
-import java.text.MessageFormat;
 import java.util.Comparator;
 import java.util.List;
 
@@ -26,7 +25,14 @@ public class Main {
         }
         System.out.println(MessageFormat.format("[{0}] = {1}", index, array[index]));
     }
-
+    private static void sortByRegion(List<City> cities) {
+        cities.sort(new Comparator<>() {
+                        @Override
+                        public int compare(City o1, City o2) {
+                            return o1.getRegion().compareToIgnoreCase(o2.getRegion());
+                        }
+                    }
+    }
     /**
      * Поиск города с наибольшим количеством жителей путем сортировки вставками
      *
