@@ -29,6 +29,6 @@ public class City {
     @Override
     public String toString(){
         return "City {Name: " + this.name + "; Region: " + this.region + "; District: " + this.district +
-                "; Population: " + this.population + "; Foundation: " + this.foundation + "}";
+                "; Population: " + this.population + "; Foundation: " + this.foundation + "}\n";
     }
 }
